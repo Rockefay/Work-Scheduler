@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.scss";
-import LoginPage from "./Pages/LoginPage";
+import AuthPage from "./Pages/AuthPage";
 
 function App() {
   return (
     <div>
-      <LoginPage />
+      <AuthPage />
     </div>
   );
 }

@@ -1,9 +1,14 @@
-$backgroung-color: #0f0e17;
-$secondary-backgroung-color: #330a19;
+$background-color: #1a1a1a;
+$secondary-background-color: #2a2a2a;
 
-$main-color: #ff8906;
-$secondary-color: #f25f4c;
-$hilight-color: #e53170;
+$main-blue: #00a8e8;
+$secondary-blue: #0098d3;
+
+$main-green: #00c896;
+$secondary-green: #00b07f;
+
+$main-font: #e0e0e0;
+$secondary-font: #b0b0b0;
 
 @mixin font-regular {
   font-family: "Roboto", sans-serif;
@@ -21,18 +26,23 @@ $hilight-color: #e53170;
   @include font-regular();
   font-size: 2vh;
   text-align: center;
+  color: $background-color;
 
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  @include no-select();
   cursor: pointer;
 
-  background-color: $main-color;
+  background-color: $main-blue;
   padding: 0.5em 1em;
-  margin: 1em 0em 5em 0em;
+  margin: 0.5em 0em;
 
   &:hover {
     transform: translate(0, -0.5vh);
     transition: 0.5s linear;
   }
+}
+
+@mixin no-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
